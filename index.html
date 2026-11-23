@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме — Артур Любченко</title>
+
+    <!-- 1 Спосіб: Зовнішні стилі (External CSS) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 2 Спосіб: Внутрішні стилі (Internal CSS) -->
+    <style>
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- Внутрішній ID та 3 Спосіб: Вбудовані стилі (Inline CSS) -->
+        <header id="main-header">
+            <h1>Артур Любченко</h1>
+            <p style="font-style: italic; opacity: 0.9;">Позиція: Студент / Trainee SOC Analyst / Мережева безпека</p>
+            <p>
+                Місто: Львів |
+                Тел: <a href="tel:+380961234567">+38 (096) 123-45-67</a> |
+                Email: <a href="mailto:artur.liubchenko.kb.2025@lpnu.ua">artur.liubchenko.kb.2025@lpnu.ua</a> |
+                GitHub: <a href="https://github.com/Tusay1" target="_blank">github.com/Tusay1</a>
+            </p>
+            <!-- Лаба 4: перемикач теми -->
+            <button id="theme-toggle" type="button">🌙 Нічна тема</button>
+        </header>
+
+        <main class="cv-container">
+            <section class="cv-section">
+                <h2 class="section-title">Про мене</h2>
+                <p>
+                    Студент спеціальності «Кібербезпека та захист інформації».
+                    Цікавлюся моніторингом загроз, аналізом мережевого трафіку, адмініструванням Linux
+                    та практичною кібербезпекою.
+                </p>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="section-title">Освіта</h2>
+                <h3>Національний університет «Львівська політехніка»</h3>
+                <p>Бакалавр, спеціальність 125 «Кібербезпека та захист інформації» (2025 – теперішній час)</p>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="section-title">Технічні навички</h2>
+                <ul>
+                    <li>Мережеві інструменти: Wireshark, Nmap, Cisco Packet Tracer, модель OSI/TCP-IP</li>
+                    <li>Мови програмування: Python, C#</li>
+                    <li>ОС та інфраструктура: Linux (Ubuntu, Arch Linux), Git, Docker</li>
+                </ul>
+            </section>
+
+            <!-- Лаба 4: коментарі, отримані із сервера -->
+            <section class="cv-section" id="reviews">
+                <h2 class="section-title">Відгуки попередніх роботодавців</h2>
+                <div id="reviews-list" class="reviews-list">
+                    <p>Завантаження відгуків...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Артур Любченко. Лабораторна робота №4 з JavaScript.</p>
+            <!-- Лаба 4: вміст localStorage -->
+            <h3>Інформація про систему та браузер (localStorage)</h3>
+            <ul id="storage-info"></ul>
+        </footer>
+    </div>
+
+    <!-- Лаба 4: модальне вікно форми зворотного зв'язку (з'являється через 1 хвилину) -->
+    <div id="modal" class="modal" hidden>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <h2 id="modal-title">Зворотний зв'язок</h2>
+            <!-- ЗАМІНІТЬ ВАШ_ЕНДПОЙНТ на свій Formspree endpoint -->
+            <form action="https://formspree.io/f/ВАШ_ЕНДПОЙНТ" method="POST">
+                <label for="f-name">Ім'я</label>
+                <input type="text" id="f-name" name="name" required>
+
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="email" required>
+
+                <label for="f-phone">Номер телефону</label>
+                <input type="tel" id="f-phone" name="phone" required>
+
+                <label for="f-message">Повідомлення</label>
+                <textarea id="f-message" name="message" rows="4" required></textarea>
+
+                <div class="modal-actions">
+                    <button type="button" id="modal-close" class="btn-secondary">Закрити</button>
+                    <button type="submit" class="btn-primary">Надіслати</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

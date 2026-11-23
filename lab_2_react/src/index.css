@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Лаба 4: темна тема керується класом "dark" на обгортці застосунку */
+@custom-variant dark (&:where(.dark, .dark *));
