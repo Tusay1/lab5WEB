@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 
-// ЗАМІНІТЬ на свій endpoint з Formspree
-const FORMSPREE_URL = 'https://formspree.io/f/ВАШ_ЕНДПОЙНТ'
+const FORMSPREE_URL = 'https://formspree.io/f/mljjpyap'
 
 function ContactForm() {
   const [isOpen, setIsOpen] = useState(false)
